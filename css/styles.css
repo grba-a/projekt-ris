@@ -211,7 +211,10 @@ a:active { color: #000; }
     line-height: 1.5;
 }
 
-.card-link { color: #3e3a35; }
+.card-link {
+    color: #3e3a35;
+    text-decoration: none;
+}
 
 .card .list {
     margin: 0 0 10px 18px;
