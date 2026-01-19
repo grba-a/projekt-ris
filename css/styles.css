@@ -1,0 +1,303 @@
+/* ========= OSNOVNO ========= */
+* { box-sizing: border-box; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========= GLOBAL ========= */
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    color: #2b2b2b;
+    background-color: #e7ddc7;
+}
+
+.page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ========= HEADER + NAV (FLEXBOX) ========= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #c9bfae;
+    background: rgba(248, 245, 238, 0.95);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #9a9387;
+    background: #f9f6f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: logoPulse 2.2s infinite;
+}
+
+@keyframes logoPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.brand-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.brand-tagline {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    padding: 8px 10px;
+    border: 1px solid #cbbda5;
+    background: #efe9dc;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+    background-color: #f9f6f0;
+}
+
+.nav-link.is-active {
+    font-weight: bold;
+    background-color: #f9f6f0;
+    border: 2px solid #9a9387;
+}
+
+/* ========= LINKOVI ========= */
+a:link { color: #3e3a35; }
+a:visited { color: #6b5f53; }
+a:hover { color: gray; text-decoration: none; }
+a:active { color: #000; }
+
+/* ========= MAIN ========= */
+.main {
+    margin-top: 18px;
+}
+
+.section {
+    border: 1px solid #c9bfae;
+    background: rgba(248, 245, 238, 0.95);
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    margin: 0 0 12px 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.section-subtitle {
+    margin: 16px 0 8px 0;
+}
+
+.text {
+    line-height: 1.6;
+}
+
+/* ========= HERO (FLEXBOX) ========= */
+.hero {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.hero-text { flex: 1; }
+
+.hero-title {
+    margin: 0 0 10px 0;
+    font-size: 34px;
+    letter-spacing: 0.3px;
+}
+
+.hero-subtitle {
+    margin: 0 0 12px 0;
+    opacity: 0.9;
+    font-size: 18px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.hero-image { flex: 1; }
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border: 2px solid #9a9387;
+    background: #f9f6f0;
+    padding: 8px;
+}
+
+/* ========= BUTTON ========= */
+.btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border: 2px solid #9a9387;
+    background: #f9f6f0;
+    color: #3e3a35;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-ghost { background: transparent; }
+
+/* ========= CARDS (FLEXBOX) ========= */
+.cards {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 220px;
+    border: 1px solid #cbbda5;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 14px;
+
+    transition: transform 0.2s;
+}
+
+.card:hover { transform: translateY(-4px); }
+
+.card-img {
+    width: 100%;
+    height: 320px;   
+    object-fit: cover; 
+    display: block;
+    border: 1px solid #cbbda5;
+    background: #efe9dc;
+    margin-bottom: 10px;
+}
+
+.card-title { margin: 0 0 6px 0; }
+
+.card-text {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+.card-link { color: #3e3a35; }
+
+.card .list {
+    margin: 0 0 10px 18px;
+}
+
+/* Cijena */
+.pill {
+    display: inline-block;
+    margin: 6px 0 0 0;
+    padding: 6px 10px;
+    border: 1px dashed #bfae85;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* ========= LISTE ========= */
+.list { line-height: 1.7; }
+
+/* ========= TABLE BOX ========= */
+.box {
+    border:none;
+    background: transparent;
+    padding: 12px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid #cbbda5;
+    padding: 8px;
+    text-align: center;
+}
+
+.table thead th {
+    background: #efe9dc;
+}
+
+.table caption {
+    text-align: left;
+    padding: 8px 0;
+    font-weight: bold;
+}
+
+/* ========= FOOTER ========= */
+.footer {
+    text-align: center;
+    padding: 16px;
+    border: 1px solid #c9bfae;
+    background: rgba(248, 245, 238, 0.95);
+}
+
+.footer-small {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+/* ========= RESPONSIVE (MEDIA QUERY) ========= */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .page { padding: 10px; }
+
+    .nav-link {
+        flex: 1;
+        text-align: center;
+    }
+
+    .card { min-width: 100%; }
+
+    .hero-title {
+    font-size: 26px;
+}
+}
